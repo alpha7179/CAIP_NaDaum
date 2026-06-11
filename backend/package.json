@@ -1,0 +1,48 @@
+{
+  "name": "@nadaum/backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "「나,다움」 백엔드 — Node.js 20+ / TypeScript 5+ / Express.js",
+  "type": "module",
+  "main": "./dist/src/index.js",
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rimraf dist",
+    "start": "node dist/src/index.js",
+    "dev": "tsx watch src/index.ts",
+    "test": "vitest --run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest --run --coverage",
+    "typecheck": "tsc --noEmit",
+    "migrate": "tsx infrastructure/migrate.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-sesv2": "^3.1065.0",
+    "@aws-sdk/client-sns": "^3.1065.0",
+    "@langchain/core": "^1.1.48",
+    "@langchain/google-genai": "^2.1.31",
+    "@langchain/openai": "^1.4.7",
+    "@nadaum/shared": "*",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "ioredis": "^5.4.1",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "pg": "^8.11.5",
+    "ws": "^8.21.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^20.11.0",
+    "@types/passport": "^1.0.17",
+    "@types/passport-google-oauth20": "^2.0.17",
+    "@types/pg": "^8.11.6",
+    "@types/ws": "^8.18.1",
+    "@vitest/coverage-v8": "^1.6.0",
+    "fast-check": "^3.19.0",
+    "rimraf": "^5.0.5",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  }
+}
