@@ -30,9 +30,6 @@
   "engines": {
     "node": ">=20.0.0"
   },
-  "dependencies": {
-    "@rollup/rollup-win32-x64-msvc": "^4.61.1"
-  },
   "optionalDependencies": {
     "@esbuild/win32-x64": "^0.21.5"
   }
